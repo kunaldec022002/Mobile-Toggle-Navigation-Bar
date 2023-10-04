@@ -14,33 +14,46 @@
     
     <div class="menu-list">
 
-        <!--logo and navigation menu-->
+		<!-- Logo and navigation menu -->
+		<div class="geeks">
+			<a href="#" class="">
+				GeeksforGeeks
+			</a>
+			
+			<div id="menus">
+				<a href="#">Language</a>
+				<a href="#">Practice</a>
+				<a href="#">Interview</a>
+				<a href="#">Puzzle</a>
+			</div>
 
-        <div class="geeks">
-            <a href="#" class="">
-                GeeksForGeeks
-            </a>
+			<!-- Bar icon for navigation -->
+			<a href="javascript:void(0);"
+				class="icon" onclick="geeksforgeeks()">
+				<i onclick="myFunction(this)"
+					class="fa fa-plus-circle">
+				</i>
+			</a>
+		</div>
+	</div>
 
-            <div id="menus">
-                <a href="#">Language</a>
-                <a href="#">Practice</a>
-                <a href="#">Interview</a>
-                <a href="#">Puzzle</a>
-            </div>
+	<script>
 
-            <!---Bar icon for navigation-->
+		// Function to toggle the bar
+		function geeksforgeeks() {
+			let x = document.getElementById("menus");
+			if (x.style.display === "block") {
+				x.style.display = "none";
+			} else {
+				x.style.display = "block";
+			}
+		}
 
-            <a href="javascript:void(0);"
-                 class="icon" onclick="geekforgeeks()">
-
-                    <i onclick="myfunction(this)"
-                       class="fa fa-plus-circle">
-                    </i>
-            </a>
-        </div>
-    </div>
-
-    
+		// Function to toggle the plus menu into minus
+		function myFunction(x) {
+			x.classList.toggle("fa-minus-circle");
+		}
+	</script>
    
     
 </body>
